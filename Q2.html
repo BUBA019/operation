@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            border-radius: 12px;
+            border: 1px dotted gray;
+            margin: 10%;
+        }
+        button{
+            padding: 10px;
+            margin: 30%px;
+            text-align: center;
+            background-color: green;
+            color: white;
+        }
+        input {
+            margin: 3px 0;
+            padding: 10px;
+            width: 50%;
+        }
+        #QUESTION {
+            background-color: darkolivegreen;
+            color: lightcyan;
+        }
+    </style>
+</head>
+<body><div id="QUESTION" ><h3>Q2:WAP TO INPUT 2 NO'S FROM THE USER & DO THEIR ADDITION,SUBTRACTION,MULTIPLICATION & DIVISION</h3>
+</div> 
+   <h3> <P><left><u>INPUT</u></left></P></h3>
+    <div>
+        <label>
+            First Number:
+            <input type="number" id="number1" placeholder="Enter First Number" required></label><br><br>
+         
+        <label>
+            Second Number:
+            <input type="number" id="number2" placeholder="Enter Second Number" required><br><br>
+        </label>
+    </div>
+    <center><button onclick="operation()">PERFORM OPERATION</button></center>
+   <h2>OUTPUT</h2>
+   <div class="output" id="output"></div>
+   <script>
+    function operation() {
+    var a = Number(document.getElementById("number1").value);
+    var b = Number(document.getElementById("number2").value);
+    var sum = a+b;
+    var sub = a-b;
+    var prd = a*b;
+    var div = a/b;
+    document.getElementById("output").innerHTML = 
+   `<p>ADDITION: ${sum}</p>
+   <p>SUBTRACTION: ${sub}</P>
+    <p>PRODUCT: ${prd}</p>
+    <p>DIVISION: ${div}</p>`;
+    }
+
+   </script>
+</body>
+</html>
